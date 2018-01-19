@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"/>
+     <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <title>福旺摇钱树</title>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../less/index.css">
+    <script src="../js/xz-area.js"></script>
+</head>
+<body>
+<div class="guanggao">
+    <img />
+</div>
+<!--登录前的进度条-->
+<div class="processbar hide">
+    <div class="processbar-info">
+        <div class="w3-light-grey">
+            <div id="myBar" class="w3-container w3-orange"></div>
+        </div>
+    </div>
+</div>
+
+<!--登录首页进来的-->
+<div class="main hide">
+    <!-- 登录页-->
+    <div class="main-login">
+        <!-- 首次领取按钮-->
+        <div class="lingqu-btn btnimg hide">
+        </div>
+        <!-- 二次登录-->
+        <div class="erci-login btnimg">
+        </div>
+        <a class="info-rule">
+            活动规则
+        </a>
+    </div>
+    <!-- 摇钱树主页-->
+    <div class="money-tree hide">
+        <!-- 头部的信息滚动条-->
+        <div class="borrowList">
+            <ul class="clearfix">
+                <li>恭喜1获取</li>
+                <li>恭喜2获取30金币</li>
+                <li>恭喜3获取30金币</li>
+                <li>恭喜4获取30金币</li>
+            </ul>
+        </div>
+        <!-- 摇钱树主页内容-->
+        <div class="yqs-cont ">
+            <!-- 人头像-->
+            <div class="pep-photo">
+                <div class="photo">
+                    <div class="small">
+                        <div class="heart clearfix">
+                            <span class="heart-full"></span>
+                            <span class="heart-full"></span>
+                            <span class="heart-full"></span>
+                            <span class="heart-full"></span>
+                            <span class="heart-full"></span>
+                            <span class="heart-full heart-half"></span>
+                        </div>
+                    </div>
+                    <img src="../images/touxiang.png" alt=""/>
+                </div>
+                <div class="voice">
+                    <img src="../images/voice.png" alt="" class="btnimg"/>
+                </div>
+
+            </div>
+            <!-- 右边三个-->
+            <div class="left-cont">
+                <div class="item changzhangjilu btnimg">
+                    <div class="num">22</div>
+                </div>
+                <div class="item youxishuoming btnimg"></div>
+                <div class="item paihangbang btnimg"></div>
+            </div>
+            <!-- 抽红包-->
+            <div class="red-paper btnimg"></div>
+            <!-- 下面的操作的按钮-->
+            <div class="activtion">
+                <div class="item">
+                    <img class="btnimg feed" src="../images/weishi.png" alt=""/>
+                </div>
+                <div class="item">
+                    <img class="btnimg liuwan" src="../images/liuwan.png" alt=""/>
+                </div>
+                <div class="item">
+                    <img class="btnimg doule" src="../images/doule.png" alt=""/>
+                </div>
+                <div class="item">
+                    <img class="btnimg friend" src="../images/haoyou.png" alt=""/>
+                </div>
+            </div>
+            <div class="dog-main">
+                <img class="doginit" src="../images/dog.png" alt=""/>
+            </div>
+        </div>
+        <!-- 红包页内容-->
+        <div class="hongbaoinfo hide">
+             <div class="fanhuiback btnimg"></div>
+              <div class="pepxinxi">
+                  <p>
+                      姓名：<span class="name">王小二</span>
+                      &nbsp;电话：<span class="tel">12345678901</span>
+                  </p>
+                  <p>
+                      住址：<span class="name">北京市朝阳区</span>
+                  </p>
+                  <span class="changeinfo btnimg"></span>
+              </div>
+              <div class="hongbaolist">
+                  <ul>
+                      <li>
+                          <div class="fl treenum">
+                                <span class="cont-num">30棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                              40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">10棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">30棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">30棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">40棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">40棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                      <li>
+                          <div class="fl treenum">
+                              <span class="cont-num">66棵</span>
+                          </div>
+                          <div class=" info-intr">
+                              <p>投注类型的红包抽取，可投入10、20、30
+                                  40、50、100颗不等的摇钱树来抽取红包（比如有35颗摇钱树，可选择10颗抽取3次，也可选择30颗的抽取一次）</p>
+                          </div>
+                          <div class="duihuan btnimg"></div>
+                      </li>
+                  </ul>
+              </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<!--弹出登陆后获取福旺的mask-->
+<div class="login-mask-fuwang hide">
+    <div class="fuwang">
+        <div class="fuwang-rule btnimg">查看活动规则并领取</div>
+    </div>
+</div>
+<!--活动规则说明的mask-->
+<div class="rule-mask hide">
+    <div class="rule-content">
+        <h3 class="tit">
+            <span>游戏说明</span>
+            <div class="close">×</div>
+        </h3>
+        <div class="detail">
+            <p>首次登录后，可领取一只“旺财”，从而开启自己专属的“旺财”养成之旅。</p>
+            <p> <span class="red">红心：</span>代表生成摇钱树进度，满格（10点）后，可生成一颗摇钱树。</p>
+            <p> <span class="red">红心：</span>代表生成摇钱树进度，满格（10点）后，可生成一颗摇钱树。代表生成摇钱树进度，满格（10点）后，可生成一颗摇钱树。代表生成摇钱树进度，满格（10点）后，可生成一颗摇钱树。代表生成摇钱树进度，满格（10点）后，可生成一颗摇钱树。</p>
+            <p>1颗摇钱树可以，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之</p>
+            <p>2颗摇钱树可以，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之</p>
+            <p>3颗摇钱树可以，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之</p>
+            <p>4颗摇钱树可以，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之</p>
+            <p>5颗摇钱树可以，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之，从而开启自己专属的“旺财”养成之</p>
+        </div>
+    </div>
+</div>
+<!--成长树的记录mask-->
+<div class="growning hide">
+    <div class="rule-content">
+        <h3 class="tit">
+            <span>成长记录</span>
+            <div class="close">×</div>
+        </h3>
+        <div class="detail">
+            <ul>
+                <span class="datatime">
+                    <span class="data">今天</span>
+                </span>
+                <li>
+                    <p class="time">2017-12-23 08:33:47</p>
+                    <p class="info">每日登录成长值，增加一颗</p>
+                </li>
+                <li>
+                    <p class="time">2017-12-23 08:33:47</p>
+                    <p class="info">每日登录成长值，增加一颗</p>
+                    <span class="tree-img">
+                        一三五
+                    </span>
+                </li>
+                <li>
+                    <p class="time">2017-12-23 08:33:47</p>
+                    <p class="info">每日登录成长值，增加一颗</p>
+                </li>
+                <li>
+                    <p class="time">2017-12-23 08:33:47</p>
+                    <p class="info">每日登录成长值，增加一颗</p>
+                </li>
+                <li>
+                    <p class="time">2017-12-23 08:33:47</p>
+                    <p class="info">每日登录成长值，增加一颗</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<!--排行榜的mask-->
+<div class="ranklist hide">
+    <div class="rule-content">
+        <h3 class="tit">
+            <span>摇财树排行榜</span>
+            <div class="close">×</div>
+        </h3>
+        <div class="detail">
+            <ul>
+                <li class="clearfix">
+                        <span class="level">1</span>
+                        <span class="name ">思思</span>
+                        <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">2</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">3</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">4</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">5</span>
+                    <span class="name">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">6</span>
+                    <span class="name hostimg">五五（我自己）</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">1</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">1</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+
+                </li>
+                <li class="clearfix">
+                    <span class="level">1</span>
+                    <span class="name ">思思</span>
+                    <span class="treenum">1</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<!--获得新摇钱树的mask-->
+<div class="yqs-mask hide">
+    <div class="tree">
+        <p>恭喜您，获得一棵摇钱树！</p>
+        <img src="../images/tree.png" alt="摇钱树"/>
+        <button class="btnimg know">我知道了</button>
+    </div>
+</div>
+<!--搜索好友-->
+<div class="friend-search hide">
+    <div class="rule-content">
+        <h3 class="tit">
+            <span>搜索好友狗窝</span>
+            <div class="close">×</div>
+        </h3>
+        <div class="detail">
+            <div class="inp">
+                <input type="text" placeholder="请输入好友微信号" class="text-input"/>
+            </div>
+            <div class="btn">
+                <button class="search-btn btnimg">搜索</button>
+            </div>
+            <h3 class="tit-his">
+                <span class="zuji">近期足迹</span>
+            </h3>
+            <div class="listes">
+                <div class="item clearfix">
+                    <a href="friend-index.html" class="fl">一三五</a>
+                    <a href="friend-index.html" class="fl">一三五</a>
+                    <a href="friend-index.html" class="fl">一三五</a>
+                    <a href="friend-index.html" class="fl">一三五</a>
+                    <a href="friend-index.html" class="fl">一三五</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--获得爱心一颗的mask-->
+<div class="heart-mask hide">
+    <div class="heart-white">
+        <img src="../images/infodog.png" alt="小狗报告"/>
+        <div class="goodinfo ">
+            <p class="gongxi">恭喜获得爱心一颗</p>
+            <p class="info">继续照顾我的福旺或者帮好友照顾福旺同样可以获得爱心！</p>
+            <button class="btnimg see">好的</button>
+        </div>
+        <div class="badinfo hide clearfix">
+            <p class="gongxi">抱歉，亲</p>
+            <p class="info">今日与福旺互动动作都已做完，亲可通过转发链接获得一次互动机会！</p>
+            <button class="btnimg cancel fl">取消</button>
+            <button class="btnimg share fr">分享</button>
+        </div>
+    </div>
+</div>
+
+<!--弹出编辑框的提示-->
+<div class="pep-infomask hide">
+    <div class="changepepinfo">
+        <div class="tit">
+            修改个人信息
+            <span class="close">×</span>
+        </div>
+        <div class="info-inp">
+            <p>兑奖中心仅限山东用户（除青岛、烟台、廊坊）</p>
+            <div> <span class="redxing"></span><input type="text" placeholder="姓名" class="pepname "/></div>
+            <div> <span class="redxing"></span><input type="text" placeholder="手机号" class="peptel"/></div>
+            <div> <span class="redxing"></span><input type="text" placeholder="县区及详细地址" class="pepdetposi"/></div>
+            <div class="clearfix">
+                <span class="redxing" style="top:0.2rem"></span><select id="s1"></select><select id="s2"></select>
+            </div>
+            <button class="save-pepinfo btnimg">保存</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+<script src="../common/jquery.min.js"></script>
+<script src="../common/fastclick.js"></script>
+<script>
+    window.onload = function () {
+//        点击穿透
+        FastClick.attach(document.body);
+
+//        点击图片按钮缩放
+        $(".btnimg").on("touchstart", function () {
+        })
+        $(".btnimg").on("touchend", function () {
+        })
+        $(".info-rule").on("touchstart", function () {
+        })
+        $(".info-rule").on("touchend", function () {
+        })
+//        以上为基础文件勿动
+//        滚动的加载
+        function processBarmove() {
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    $(".processbar").hide();
+                    $(".main").show();
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                }
+            }
+        }
+
+//        广告页图片的任意选择
+        var guanggaoindex=Math.ceil(Math.random()*4);
+        $(".guanggao img").attr("src","../images/gg"+guanggaoindex+".jpg");
+        setTimeout(function(){
+            $(".guanggao").fadeOut();
+            $(".processbar").show();
+            processBarmove();
+        },1500)
+
+
+//        首页登录进来请求后台接口，判断首次还是二次，不同的显示和隐藏
+//        首次进来点击领取按钮
+        $(".lingqu-btn").on("click",function(){
+           $(".login-mask-fuwang").show();
+        })
+        $(".login-mask-fuwang .fuwang-rule").click(function(){
+            $(".login-mask-fuwang").hide();
+            $(".rule-mask").show();
+        })
+//        首页点击活动规则按钮弹出规则
+        $(".info-rule").on("click",function(){
+            $(".rule-mask").show();
+        })
+        $(".rule-content .close").on("click",function(){
+            $(".rule-mask").hide();
+            $(".growning").hide();
+            $(".ranklist").hide();
+            $(".friend-search").hide();
+        })
+        ////////////////////
+//        点击照料我的福旺进入摇钱树首页
+        $(".main-login .erci-login").click(function(){
+            $(".main-login").hide();
+            $(".money-tree").show();
+            //头部信息的滚动
+            var index = 0;
+            var listHeight = parseInt($('.borrowList').css('height'));
+            function addTransition() {
+                $('.borrowList ul').get(0).style.webkitTransition = "all .4s";
+                $('.borrowList ul').get(0).style.transition = "all .4s";
+            }
+            function removeTransition() {
+                $('.borrowList ul').get(0).style.webkitTransition = "none";
+                $('.borrowList ul').get(0).style.transition = "none";
+            }
+            setInterval(function() {
+                index++;
+                addTransition();
+                $(".borrowList ul").css("transform", "translateY(-" + index * listHeight + "px)");
+                $(".borrowList ul").css("webkitTransform", "translateY(-" + index * listHeight + "px)");
+            }, 2000)
+            $('.borrowList').get(0).addEventListener('webkitTransitionEnd', function() {
+                if (index >= $('.borrowList li').length) {
+                    index = 0;
+                    removeTransition();
+                    $(".borrowList ul").css("transform", "translateY(-" + index * listHeight + "px)");
+                    $(".borrowList ul").css("webkitTransform", "translateY(-" + index * listHeight + "px)");
+                }
+            });
+            $('.borrowList').get(0).addEventListener('transitionEnd', function() {
+                if (index >= $('.borrowList li').length) {
+                    index = 0;
+                    removeTransition();
+                    $(".borrowList ul").css("transform", "translateY(-" + index * listHeight + "px)");
+                    $(".borrowList ul").css("webkitTransform", "translateY(-" + index * listHeight + "px)");
+                }
+            });
+            //滚动动画结束
+        });
+
+        //点击游戏说明,成长记录，排行榜  右边三个
+        $(".youxishuoming").on("click",function(){
+            $(".rule-mask").show();
+        })
+        $(".changzhangjilu").on("click",function(){
+            $(".growning").show();
+        });
+        $(".paihangbang").on("click",function(){
+            $(".ranklist").show();
+        });
+//        点击好友搜索弹出
+        $(".activtion .friend").on("click",function(){
+            $(".friend-search").show();
+        });
+//        点击小狗的4个动作
+//        单纯点击小狗的动作
+        $(".dog-main .doginit").on("click",function(){
+            $(".dog-main .doginit").attr("src","../images/dianji.gif");
+        })
+//        互动点击小狗喂食
+        $(".feed").on("click",function(){
+            $(".dog-main .doginit").attr("src","../images/weishi.gif");
+        })
+        $(".liuwan").on("click",function(){
+            $(".dog-main .doginit").attr("src","../images/liugou.gif");
+        })
+        $(".doule").on("click",function(){
+            $(".dog-main .doginit").attr("src","../images/doule.gif");
+        })
+
+
+
+        $(".daoluan").on("click",function(){
+            $(".dog-main .doginit").attr("src","../images/doule.gif");
+        })
+
+//        点击抽红包
+        $(".red-paper").on("click",function(){
+            $(".yqs-cont").hide();
+            $(".money-tree").addClass("redbag").find(".hongbaoinfo").show();
+        })
+//        点击更改个人信息
+        $(".changeinfo").on("click",function(){
+            xzArea({
+                select1:"#s1",
+                select2:"#s2",
+                selected1:'江苏',//可选，指定选择省份，在编辑的时候特别有用
+                selected2:'选择城市'//同上
+            })
+            $(".pep-infomask").show();
+
+
+        })
+        $(".pep-infomask .close").on("click",function(){
+            $(".pep-infomask").hide();
+        })
+
+
+
+//        点击返回主页
+        $(".fanhuiback").on("click",function(){
+            $(".hongbaoinfo").hide();
+            $(".money-tree").removeClass("redbag").find(".yqs-cont").show();
+        })
+
+//        点击获取摇钱树后的知道了
+        $(".yqs-mask .know").on("click",function(){
+            $(".yqs-mask").hide();
+        });
+        //    点击获取爱心后的好的
+        $(".heart-mask .see").on("click",function(){
+            $(".heart-mask").hide();
+        });
+//        点击弹出"抱歉，亲"的取消按钮
+        $(".badinfo .cancel").on("click",function(){
+            $(".heart-mask").hide();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,1141 @@
+@charset "utf-8";
+//登录首页进来的状态
+  body,html{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  //广告
+  .guanggao{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  //进度条
+  .main{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .processbar{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    .processbar-info{
+      position: relative;
+      top: 50%;
+      padding: 0 0.4rem 0 1.45rem;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    .w3-light-grey{
+      color: #000 ;
+      background-color: #B3B3B3;
+      height:0.3rem;
+      border-radius: 0.15rem;
+      .w3-orange{
+        color: #fff;
+        height:0.3rem;
+        width:1%;
+        border-radius: 0.15rem;
+        background: #FFF600 url("../images/img_hot.png") no-repeat 98% center;
+        background-size: 0.12rem 0.12rem;
+        position: relative;
+      }
+      .w3-orange:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.9rem;
+        height: 1rem;
+        background:url("../images/jindutiao-dog.gif") no-repeat center;
+        background-size: 0.9rem 1rem;
+        top: -1rem;
+        right: -0.3rem;
+      }
+    }
+  }
+  .btnimg{
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: .1s;
+    transition-duration: .1s;
+  }
+  .btnimg:active{
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  .main-login{
+    width: 100%;
+    height: 100%;
+    background: url("../images/bg02.png") no-repeat center;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .lingqu-btn{
+      position: absolute;
+      width: 4.53rem;
+      height: 1.27rem;
+      background:url("../images/lingqu_btn.png") no-repeat center;
+      background-size: 4.53rem 1.27rem;
+      bottom:0.5rem;
+      left: 50%;
+      -webkit-transform:translateX(-50%);
+      -moz-transform:  translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .lingqu-btn:active{
+      -webkit-transform: translateX(-50%) scale(0.8) ;
+      -moz-transform: translateX(-50%) scale(0.8) ;
+      -ms-transform:  translateX(-50% ) scale(0.8);
+      -o-transform:translateX(-50%)  scale(0.8) ;
+      transform: translateX(-50%) scale(0.8) ;
+    }
+    .erci-login{
+      position: absolute;
+      width: 4.53rem;
+      height: 1.27rem;
+      background:url("../images/zhaoliao_btn.png") no-repeat center;
+      background-size: 4.53rem 1.27rem;
+      bottom:0.5rem;
+      left: 50%;
+      -webkit-transform:translateX(-50%);
+      -moz-transform:  translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .erci-login:active{
+      -webkit-transform: translateX(-50%) scale(0.8) ;
+      -moz-transform: translateX(-50%) scale(0.8) ;
+      -ms-transform:  translateX(-50% ) scale(0.8);
+      -o-transform:translateX(-50%)  scale(0.8) ;
+      transform: translateX(-50%) scale(0.8) ;
+    }
+  }
+  //活动规则
+.info-rule{
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  transform: translate(-50%);
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 16px;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+}
+.info-rule:hover{
+  text-decoration: underline;
+}
+.info-rule:active{
+  color: red;
+}
+
+//弹出获取福旺的mask
+.login-mask-fuwang{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 99;
+  .fuwang{
+    width: 4.07rem;
+    height: 5.58rem;
+    background:url("../images/huodefuwang.png") no-repeat top center;
+    background-size: 4.07rem 4.58rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    .fuwang-rule{
+      width: 3.6rem;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      position: absolute;
+      bottom: 0;
+      left: 0.235rem;
+      background-color:#F0372E;
+      color: #FFCFBE;
+      font-size: 14px;
+      border-radius:4px;
+      box-shadow: 0 4px #B51E17;
+    }
+  }
+}
+//活动规则的弹框
+.rule-mask,.growning,.ranklist,.friend-search{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  .rule-content{
+    width: 100%;
+    height: 60%;
+    //overflow: auto;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 8px 8px 0 0;
+    .tit{
+      height: 1.05rem;
+      border-bottom: 1px solid #E6E6E6;
+      padding-left: 0.37rem;
+      font-weight: normal;
+      position: relative;
+      span{
+        font-size: 15px;
+        color: #333;
+        position: absolute;
+        bottom: 0.15rem;
+        font-weight: 600;
+      }
+    }
+    .tit:before{
+      content: "";
+      display: block;
+      width: 1.9rem;
+      height: 1.9rem;
+      background:url("../images/youxishuoming_logo.png") no-repeat center;
+      background-size: 1.9rem 1.9rem;
+      position: absolute;
+      top: -0.95rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+    .close{
+      width: 0.4rem;
+      height: 0.4rem;
+      line-height: 0.4rem;
+      text-align: center;
+      position: absolute;
+      top: 0.27rem;
+      right: 0.16rem;
+      border-radius: 50%;
+      background-color: #CCC;
+      color: #fff;
+      font-size: 0.4rem;
+    }
+    .detail{
+      padding:0.25rem 0.43rem ;
+      height: 100%;
+      overflow-y:auto;
+      padding-bottom: 1.25rem;
+      p{
+        text-indent: 2em;
+        color: #4D4D4D;
+        line-height: 0.3rem;
+        margin-bottom: 0.2rem;
+        font-size: 0.26rem;
+        word-break: break-all;
+        .red{
+          color: #F33E34;
+        }
+      }
+    }
+  }
+}
+
+//进入摇钱树首页
+.money-tree{
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg.jpg) no-repeat center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .pep-photo{
+    position: absolute;
+    top: 1.26rem;
+    left: 0.3rem;
+    .photo{
+      height: 0.56rem;
+      //width: 3.28rem;
+      background-color: #8DE4FE;
+      padding: 0.06rem;
+      border-radius:0.28rem;
+      position: relative;
+      .small{
+        //width: 100%;
+        height: 0.44rem;
+        background-color: #E8FAFF;
+        border-radius: 0.22rem;
+        position: relative;
+        padding-left: 0.95rem;
+        padding-right: 0.1rem;
+        overflow: hidden;
+        .heart{
+          //width: 2.06rem;
+          position: relative;
+          top: 50%;
+          right:0;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          height: 0.44rem;
+          .heart-full{
+            float: left;
+            display: inline-block;
+            width: 0.36rem;
+            height: 0.44rem;
+            background:url("../images/heart.png") no-repeat center;
+            background-size: 0.36rem 0.3rem;
+            margin-right: 0.06rem;
+          }
+          .heart-full:last-child{
+            margin-right: 0;
+          }
+          .heart-half{
+            background:url("../images/heart2.png") no-repeat center;
+            background-size: 0.36rem 0.3rem;
+          }
+        }
+      }
+      img{
+        position: absolute;
+        width: 0.9rem;
+        height: 0.9rem;
+        left: -1px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+    .voice{
+      width: .4rem;
+      height: .38rem;
+      position: relative;
+      top: 0.32rem;
+      left: 0.28rem;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .left-cont{
+    position: absolute;
+    top: 1.2rem;
+    right: 0.35rem;
+    width: 0.95rem;
+    text-align: center;
+    .item{
+      width: 0.95rem;
+      height: 1rem;
+      background-color: red;
+      margin-bottom: 0.2rem;
+    }
+    .item:last-child{
+      margin-bottom: 0;
+    }
+    .changzhangjilu{
+      background: url("../images/chengzhangjilu.png") no-repeat center;
+      background-size:0.95rem 1rem;
+      position: relative;
+      .num{
+        width: 0.4rem;
+        height: 0.4rem;
+        line-height: 0.4rem;
+        text-align: center;
+        position: absolute;
+        top: 1px;
+        right: -0.1rem;
+        border-radius: 50%;
+        background-color: #E74C2E;
+        color:#fff ;
+        font-size: 0.24rem;
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+        transform: scale(0.8);
+      }
+    }
+    .youxishuoming{
+      background: url("../images/youxishuoming.png") no-repeat center ;
+      background-size:0.95rem 1rem;
+    }
+    .paihangbang{
+      background: url("../images/paihangbang.png") no-repeat center ;
+      background-size:0.8rem 1rem;
+    }
+  }
+  .red-paper{
+    position: absolute;
+    left: 0.4rem;
+    bottom: 3rem;
+    width: 1.35rem;
+    height: 1.53rem;
+    background:url("../images/chouhongbao.png") no-repeat center;
+    background-size: 100%;
+  }
+  .activtion{
+    width: 100%;
+    height: 1.16rem;
+    padding: 0 0.37rem 0 0.47rem;
+    position: absolute;
+    bottom: 0.66rem;
+    .item{
+      width: 25%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      img{
+        width: 1rem;
+        height: 1.16rem;
+      }
+    }
+
+  }
+  .dog-main{
+    position: absolute;
+    width: 3.74rem;
+    height: 3.87rem;
+    bottom: 2.3rem;
+    overflow: hidden;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    img{
+      width: 3.74rem;
+      height: 3.87rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+    .doginit{
+      display: block;
+    }
+  }
+
+}
+.redbag{
+  background: #EB4A4A url("../images/chouhongbaobanner.png") no-repeat center 0.8rem;
+  background-size: 6.68rem 2.05rem;
+  //  红包页内容
+  .hongbaoinfo{
+      position: relative;
+      height: 100%;
+    .fanhuiback{
+      position: absolute;
+      top: 2.08rem;
+      right: 0.4rem;
+      width: 1.6rem;
+      height: 0.48rem;
+      background:url("../images/fanhuizhuye.png") no-repeat center;
+      background-size: 100%;
+    }
+    .pepxinxi{
+      width: 6.6rem;
+      height: 1.6rem;
+      background:url("../images/bolang_bg.png") no-repeat center;
+      background-size: 100%;
+      margin: 0 auto;
+      position: absolute;
+      top:2.72rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      -o-transform: translateX(-50%);
+      transform: translateX(-50%);
+      padding: 0.3rem 0.2rem;
+      p{
+        height: 0.5rem;
+        color: #333333;
+      }
+      .changeinfo{
+        width: 0.88rem;
+        height: 0.88rem;
+        display: block;
+        background:url("../images/genggaixinxi_btn.png") no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        right: 0.17rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .changeinfo:active{
+        -webkit-transform: translateY(-50%) scale(0.8);
+        -moz-transform: translateY(-50%) scale(0.8);
+        -ms-transform: translateY(-50%) scale(0.8);
+        -o-transform: translateY(-50%) scale(0.8);
+        transform: translateY(-50%) scale(0.8);
+      }
+    }
+    .hongbaolist{
+        width: 100%;
+        position: absolute;
+        top: 4.42rem;
+        padding: 0 0.16rem;
+        height: 100%;
+        overflow-y:auto;
+        //padding-top: 4.42rem;
+        padding-bottom:5.16rem;
+        li{
+          height: 2rem;
+          border-bottom: 2px dotted #B13737;
+          position: relative;
+          overflow: hidden;
+          .treenum{
+            width: 1.3rem;
+            height: 1.3rem;
+            border-radius: 50%;
+            background: #fff url("../images/hongbao.png") no-repeat center;
+            background-size: 0.69rem 0.87rem;
+            position: absolute;
+            top: 0.3rem;
+          }
+          .treenum:before{
+            position: absolute;
+            bottom: -0.23rem;
+            left: 50%;
+            content: "";
+            display: block;
+            height: 0.4rem;
+            width: 0.72rem;
+            background-color: #EB4A4A;
+            border-radius: 0.2rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+          }
+          .cont-num{
+            position: absolute;
+            bottom: -0.16rem;
+            left: 50%;
+            display: block;
+            height: 0.3rem;
+            width: 0.62rem;
+            background-color: #fff;
+            border-radius: 0.15rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            text-align: center;
+            line-height: 0.3rem;
+            font-size: 0.22rem;
+            color:#EB4A4A;
+          }
+          .info-intr{
+            width: 100%;
+            overflow: hidden;
+            padding-right: 1.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            p{
+              font-size: 0.22rem;
+              color: #FFFFFF;
+              line-height: 0.26rem;
+            }
+          }
+          .duihuan{
+            position: absolute;
+            right: 0.16rem;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 1.4rem;
+            height: 0.6rem;
+            background:url("../images/duihuan.png") no-repeat left center;
+            background-size: 1.4rem 0.6rem;
+          }
+          .duihuan:active{
+            -webkit-transform: translateY(-50%) scale(0.8);
+            -moz-transform: translateY(-50%) scale(0.8);
+            -ms-transform: translateY(-50%) scale(0.8);
+            -o-transform: translateY(-50%) scale(0.8);
+            transform: translateY(-50%) scale(0.8);
+          }
+        }
+    }
+  }
+}
+//头部信息滚动
+.borrowList {
+  height: 0.68rem;
+  overflow: hidden;
+  background-color: #B4F2FF;
+  ul{
+    position: relative;
+  }
+}
+.borrowList li {
+  float: left;
+  font-size: 16px;
+  margin: 0;
+  line-height: 0.68rem;
+  width:100%;
+  color: #F33E34;
+  text-align: center;
+  overflow: hidden;
+}
+//  成长记录表
+.growning{
+  .rule-content .tit:before{
+    background: url(../images/chengzhangjilu_logo.png) no-repeat center;
+    background-size: 1.9rem 1.9rem;
+  }
+  .rule-content .detail{
+    padding: 0.57rem 0.61rem 1.2rem 0.66rem;
+    ul{
+      border-left: 1px solid #D4D4D4;
+      width: 100%;
+      position: relative;
+      padding-left: 0.58rem;
+      .datatime{
+        position: absolute;
+        left: -0.3rem;
+        top: 0;
+        width: 0.6rem;
+        height: 0.75rem;
+        background-color: #fff;
+        .data{
+          display: block;
+          width: 0.6rem;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          border-radius: 50%;
+          background-color:#F33E34;
+          color: #fff;
+          font-size:0.26rem;
+          text-align: center;
+        }
+      }
+      li{
+        padding: 0.2rem 0.44rem 0.2rem 0.2rem;
+        background-color: #F2EEED;
+        border-radius: 4px;
+        position: relative;
+        margin-bottom: 0.48rem;
+        p{
+          text-align: left;
+          text-indent: 0;
+        }
+        .time{
+          font-size: 0.2rem;
+          color: #B3A9A8;
+          margin-bottom: 0.12rem;
+        }
+        .info{
+          font-size: 0.24rem;
+          color: #807473;
+          margin-bottom: 0;
+        }
+        .tree-img{
+          position: absolute;
+          right: 0.34rem;
+          top: 50%;
+          -webkit-transform: translateY(-50%) scale(0.9);
+          -moz-transform: translateY(-50%) scale(0.9);
+          -ms-transform: translateY(-50%) scale(0.9);
+          -o-transform: translateY(-50%) scale(0.9);
+          transform: translateY(-50%) scale(0.9);
+          width: 0.7rem;
+          height: 0.8rem;
+          background:url("../images/135.png") no-repeat center top;
+          background-size: 0.5rem 0.5rem;
+          text-decoration: underline;
+          color: #F35E57;
+          overflow: hidden;
+          font-size: 0.18rem;
+          text-align: center;
+          padding-top: 0.5rem;
+        }
+      }
+      li:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: -0.16rem;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-top: 0.1rem solid transparent;
+        border-right: 0.2rem solid #F2EEED;
+        border-bottom: 0.1rem solid transparent;
+      }
+      li:last-child{
+        margin-bottom: 0;
+      }
+      li:last-child:after{
+        content: "";
+        display: block;
+        width: 5px;
+        height: 50%;
+        background-color: #fff;
+        position: absolute;
+        left: -0.65rem;
+        bottom: 0;
+      }
+    }
+  }
+}
+//摇钱树排行榜
+.ranklist{
+  .rule-content .tit:before{
+    background: url(../images/paihangbang_logo.png) no-repeat center;
+    background-size: 1.9rem 1.9rem;
+  }
+  .rule-content{
+    .detail{
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+      ul{
+        li{
+          padding: 0 0.92rem 0 0.2rem;
+          height: 1rem;
+          line-height: 1rem;
+          border-bottom: 1px solid #E6E6E6;
+          span{
+            float: left;
+            height: 100%;
+            overflow: hidden;
+          }
+          .level{
+            text-align: center;
+            width: 15.1%;
+            color: #4D4D4D;
+          }
+          .name{
+            text-align: left;
+            padding-left: 1rem;
+            width:65.9% ;
+            color: #4D4D4D;
+            background: url("../images/135.png") no-repeat left center;
+            background-size: 0.8rem 0.8rem;
+          }
+          .hostimg{
+            background: url("../images/touxiang.png") no-repeat left center;
+            background-size: 0.8rem 0.8rem;
+            color: #F33E34;
+          }
+          .treenum{
+            text-align: center;
+            padding-top: 0.64rem;
+            width: 19%;
+            background: url("../images/chengzhangjilu_logo.png") no-repeat center 0.1rem;
+            background-size: 0.54rem 0.54rem;
+            font-size: 0.2rem;
+            line-height: 0.36rem;
+            color: #F33E34;
+          }
+        }
+        li:nth-of-type(1),li:nth-of-type(2),li:nth-of-type(3){
+          .level{
+            color: #F33E34;
+          }
+        }
+      }
+    }
+  }
+}
+//弹出好友的搜索框
+.friend-search{
+  .rule-content .tit:before{
+    background: url(../images/head_photo.png) no-repeat center;
+    background-size: 1.9rem 1.9rem;
+  }
+  .rule-content  .detail{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    .inp{
+      padding-top: 0.2rem;
+      padding-bottom: 0.35rem;
+      text-align: center;
+      .text-input{
+        -webkit-appearance:none;
+        display:inline-block;
+        width: 5.4rem;
+        text-align: center;
+        margin: 0 auto;
+        height: 0.72rem;
+        border: 1px solid #D4D4D4;
+        border-radius: 4px;
+        font-size: 0.3rem;
+      }
+    }
+    .btn{
+      text-align: center;
+      border-bottom: 1px solid #E6E6E6;
+      .search-btn{
+        margin: 0 auto;
+        width: 2.4rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        border-radius:0.3rem;
+        -webkit-appearance: none;
+        background: #F33E34;
+        color: #fff;
+        border: none;
+        //font-weight: bold;
+        text-align: center;
+        font-size: 0.32rem;
+        margin-bottom: 0.36rem;
+      }
+    }
+    .tit-his{
+      font-weight: normal;
+      padding: 0 0.37rem;
+      margin-top: 0.1rem;
+      .zuji{
+        font-size: 15px;
+        color: #333;
+        font-weight: 600;
+      }
+    }
+    .listes{
+      text-align: center;
+      .item{
+        display: inline-block;
+        width: 5.4rem;
+        padding-top: 0.1rem;
+        a{
+          color: #F33E34;
+          text-decoration: underline !important;
+          margin-right: 0.9rem;
+          margin-bottom: 0.15rem;
+        }
+      }
+    }
+
+  }
+}
+//弹出获取了新摇钱树
+.yqs-mask{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  .tree{
+    width: 5.14rem;
+    height: 7.40rem;
+    background:url("../images/hudiejie_bg.png");
+    background-size: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-top: 2.59rem;
+    text-align: center;
+    p{
+      text-align: center;
+      color: #D92800;
+      font-size: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+    img{
+      width: 3.11rem;
+      height: 2.35rem;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 0.4rem;
+    }
+    button{
+      -webkit-appearance: none;
+      background: #FF9B00;
+      color: #fff;
+      border: none;
+      border-radius: 0.28rem;
+      height: 0.56rem;
+      line-height: 0.56rem;
+      padding: 0 0.59rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .tree:before{
+    content: "";
+    position: absolute;
+    left: 0.2rem;
+    bottom: -0.18rem;
+    width: 1.08rem;
+    height: 1.12rem;
+    background:url("../images/dog.png") no-repeat center;
+    background-size: 100%;
+  }
+}
+//获得爱心一颗的mask
+.heart-mask{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  .heart-white{
+    width: 4.8rem;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding:0.48rem 0.37rem;
+    border-radius: 6px;
+    img{
+      width: 2.21rem;
+      height: 1.89rem;
+    }
+    button{
+      -webkit-appearance: none;
+      background: #F33E34;
+      color: #fff;
+      border: none;
+      border-radius: 0.3rem;
+      height: 0.6rem;
+      width: 2.4rem;
+      line-height: 0.6rem;
+      //font-weight: bold;
+      text-align: center;
+      //font-size: 16px;
+    }
+    .gongxi{
+      font-size: 0.26rem;
+      font-weight: bold;
+     color: #333;
+      margin-top: 0.22rem;
+      margin-bottom:0.36rem ;
+    }
+    .info{
+      font-size: 0.24rem;
+      color: #878787;
+      line-height: 0.26rem;
+      text-align: left;
+      margin-bottom: 0.54rem;
+    }
+  }
+  .badinfo{
+    button{
+      width: 1.95rem;
+      font-weight: normal;
+    }
+  }
+  .badinfo .cancel{
+    background-color: #CCC4C4;
+  }
+}
+//编辑个人信息的mask
+.pep-infomask{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 100;
+  padding: 0 0.46rem;
+  .changepepinfo{
+    background-color: #fff;
+    //height: 4.8rem;
+    width: 5.8rem;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .tit{
+        padding: 0 0.2rem;
+        color: #333;
+        border-bottom: 1px solid #E6E6E6;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        background: #ECECF1;
+        border-radius: 3px 3px 0 0;
+        position:relative;
+      .close{
+        width: 0.6rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        text-align: center;
+        position: absolute;
+        top: 0.05rem;
+        right: 0.16rem;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 0.4rem;
+      }
+    }
+    .info-inp{
+      padding: 0 0.2rem;
+      p{
+        color:#F33E34;
+        font-size: 12px;
+        margin-top: 0.1rem;
+        margin-bottom: 0.15rem;
+      }
+      input{
+        -webkit-appearance:none;
+        height: 0.8rem;
+        width: 100%;
+        border: 1px solid #cbc6c6;
+        border-radius: 3px;
+        margin-bottom: 0.25rem;
+        padding-left: 0.1rem;
+        line-height: 0.3rem;
+      }
+      .redxing{
+        position: relative;
+      }
+      .redxing:before{
+        content: "*";
+        position: absolute;
+        width: 0.22rem;
+        height: 0.22rem;
+        left: -0.1rem;
+        top: 0;
+        font-size:0.2rem;
+        color: #F33E34;
+      }
+      .save-pepinfo{
+        background-color:#60d060;
+        -webkit-appearance: none;
+        color: #fff;
+        width: 100%;
+        height: 0.8rem;
+        line-height: 0.6rem;
+        border-radius:3px;
+        margin-bottom: 0.3rem;
+        border: none;
+        font-size: 16px;
+      }
+      #s1{
+        -webkit-appearance: none;
+        height: 0.8rem;
+        width: 30%;
+        background-color: #fff;
+        border-radius: 3px;
+        margin-bottom: 0.4rem;
+        float: left;
+        border: 1px solid #cbc6c6;
+        padding-left: 0.1rem;
+        font-size: 14px;
+      }
+      #s2{
+        float: right;
+        height: 0.8rem;
+        width: 65%;
+        border: 1px solid #cbc6c6;
+        padding-left: 0.1rem;
+        border-radius: 3px;
+        font-size: 14px;
+      }
+    }
+
+  }
+}
+
+
+
+
+//好友页面单独css 开始
+.money-tree .backhome{
+  position: absolute;
+  left: 0.4rem;
+  bottom: 3rem;
+  width: 1.35rem;
+  height: 1.53rem;
+  background: url(../images/huijia.png) no-repeat center;
+  background-size: 100%;
+}
+.money-tree .left-cont .stealtree {
+  background: url(../images/toushu.png) no-repeat center;
+  background-size: 0.95rem 1rem;
+}
+
+
+
+
